@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QR Code Scanner & Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="startQRScanner()">
+    <div class="container">
+        <h1>QR Code Scanner & Generator</h1>
+
+        <div class="scanner">
+           
+            <h2>Scan QR Code</h2>
+            <video id="preview"></video>
+            <p id="scan-result">Scan for Result: </p>
+           <label for="file-input" class="custom-file-upload">
+    Choose QR from device
+</label>
+<input type="file" id="file-input" accept="image/*">
+
+        </div>
+
+        <div class="generator">
+            <h2>Generate QR Code</h2>
+            <input type="text" id="qr-text" placeholder="Enter text or URL">
+            <button id="generate-btn">Generate QR</button>
+            <div id="qr-code"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
